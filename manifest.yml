@@ -1,0 +1,20 @@
+modules:
+  jiraServiceManagement:portalRequestDetailPanel:
+    - key: knowledge-firewall-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: knowledge-firewall
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/108bdf63-60c6-4263-8a02-ae445a6a1a21
